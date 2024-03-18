@@ -6,15 +6,14 @@
 <title>Responsive inline block</title>
 <style>
 
-  .container {
+.container {
     display: block;
-    /* Adjust the width */
+    width: calc(100% - 40px); /* Adjust the width */
     background-color: aquamarine;
     padding: 10px 20px;
   }
-
   .item {
-    /* add width */
+    width: calc(23% - 20px); /* Adjust the width */
     margin: 10px auto;
     padding: 20px;
     background-color: #f2f2f2;
@@ -22,15 +21,18 @@
     border-radius: 5px;
     display: inline-block;
   }
-  
   @media (max-width: 900px) {
-    /* Adjust the width */
+    .item {
+        width: calc(50% - 50px); /* Adjust the width */
+    }
   }
 
   @media (max-width: 600px) {
-      /* Adjust the width */
-      /* change display type */
-      /* margin to center */
+    .item {
+      width: calc(100% - 70px); /* Adjust the width */
+      display: block; /* change display type */
+      margin: 10px auto; /* margin to center */
+    }
   }
 </style>
 </head>

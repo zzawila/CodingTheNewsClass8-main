@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!-- metatag for responsive -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- metatag for responsive -->
 <title>Responsive Flexbox</title>
 <style>
 
   .container {
-    /* Display Flex */
-     /* Have the elements wrap around if it gets too long*/
-    /* Evenly space the elements */
+    display: flex; /* Display Flex */
+    flex-wrap: wrap; /* Have the elements wrap around if it gets too long*/
+    justify-content: space-around; /* Evenly space the elements */
     background-color: lightcoral; 
     
   }
   .item {
-    /* Flex-basis for the element */
+    flex-basis: 20%; /* Flex-basis for the element */
     margin: 10px;
     padding: 20px;
     background-color: #f2f2f2;
@@ -23,11 +23,15 @@
   }
 
   @media (max-width: 900px) {
-    /* adjust flex basis for element */
+    .item{
+      flex-basis: calc (45% - 30px); /* adjust flex basis for element */
+    }
   }
 
   @media (max-width: 600px) {
-    /* adjust flex basis for element */
+    .item {
+      flex-basis: calc(100% - 70px); /* Do it again for flex element */
+    }
   }
 </style>
 </head>
