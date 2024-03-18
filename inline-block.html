@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive inline block</title>
+<style>
+
+  .container {
+    display: block;
+    width: calc(100% - 40px); /* Adjust the width */
+    background-color: aquamarine;
+    padding: 10px 20px;
+  }
+  .item {
+    width: calc(23% - 20px); /* Adjust the width */
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  @media (max-width: 900px) {
+    .item {
+        width: calc(50% - 50px); /* Adjust the width */
+    }
+  }
+
+  @media (max-width: 600px) {
+    .item {
+      width: calc(100% - 70px); /* Adjust the width */
+      display: block; /* change display type */
+      margin: 10px auto; /* margin to center */
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+  </div>
+</body>
+</html>
